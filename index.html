@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Portofolio UAS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top,#0f2027,#203a43,#2c5364);
+  color:#e0e0e0;
+}
+
+header{
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  text-align:center;
+  padding:35px 20px;
+}
+
+header h1{
+  font-family:'Orbitron';
+  letter-spacing:3px;
+  margin:0;
+}
+
+header p{font-size:13px;opacity:.85}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  padding:15px;
+  background:rgba(0,0,0,.4);
+}
+
+nav button{
+  padding:10px 18px;
+  border-radius:25px;
+  border:1px solid rgba(255,255,255,.3);
+  background:transparent;
+  color:#00e5ff;
+  font-family:'Orbitron';
+  font-size:11px;
+  cursor:pointer;
+}
+
+nav button i{
+  margin-right:6px;
+}
+
+nav button:hover{
+  background:#00e5ff;
+  color:#000;
+}
+
+.section{
+  display:none;
+  margin:20px;
+  padding:25px;
+  background:rgba(255,255,255,.07);
+  border-radius:18px;
+  backdrop-filter:blur(10px);
+}
+
+.section.active{display:block}
+
+h2{
+  font-family:'Orbitron';
+  color:#00e5ff;
+}
+
+h3{color:#80deea}
+
+p,li{font-size:14px;line-height:1.8}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:15px;
+}
+
+.stat{
+  background:rgba(255,255,255,.08);
+  padding:20px;
+  border-radius:14px;
+  text-align:center;
+}
+
+.stat h4{
+  margin:0;
+  font-family:'Orbitron';
+  color:#00e5ff;
+}
+
+.faq-btn{
+  width:100%;
+  background:rgba(0,229,255,.2);
+  color:#00e5ff;
+  border:none;
+  padding:12px;
+  margin-top:10px;
+  border-radius:10px;
+  font-family:'Orbitron';
+  cursor:pointer;
+  text-align:left;
+}
+
+.faq-answer{
+  display:none;
+  margin-top:5px;
+  padding:10px;
+  background:rgba(255,255,255,.05);
+  border-radius:10px;
+}
+
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:10px;
+  border:none;
+  background:rgba(255,255,255,.1);
+  color:white;
+}
+
+button[type="submit"]{
+  padding:10px 20px;
+  border-radius:20px;
+  border:none;
+  background:#00e5ff;
+  color:#000;
+  font-family:'Orbitron';
+  cursor:pointer;
+}
+
+.contact-info{
+  margin-top:20px;
+  padding:15px;
+  background:rgba(255,255,255,.05);
+  border-radius:15px;
+}
+
+.contact-info i{
+  color:#00e5ff;
+  margin-right:8px;
+}
+
+iframe{
+  width:100%;
+  height:250px;
+  border-radius:15px;
+  border:none;
+  margin-top:10px;
+}
+
+video,audio,img{
+  width:100%;
+  margin-top:10px;
+  border-radius:12px;
+}
+
+footer{
+  text-align:center;
+  font-size:12px;
+  padding:15px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Website Portofolio</h1>
+  <p>Ujian Akhir Semester</p>
+</header>
+
+<nav>
+  <button onclick="openMenu('home')"><i class="fa fa-house"></i>Home</button>
+  <button onclick="openMenu('profile')"><i class="fa fa-user"></i>Profile</button>
+  <button onclick="openMenu('karya')"><i class="fa fa-briefcase"></i>Karya</button>
+  <button onclick="openMenu('media')"><i class="fa fa-photo-film"></i>Media</button>
+  <button onclick="openMenu('informasi')"><i class="fa fa-circle-info"></i>Informasi</button>
+  <button onclick="openMenu('kontak')"><i class="fa fa-envelope"></i>Kontak</button>
+</nav>
+
+<div id="home" class="section active">
+  <h2>Home</h2>
+  <p>Selamat datang di website portofolio UAS.</p>
+</div>
+
+<div id="profile" class="section">
+  <h2>Data Diri</h2>
+  <p><b>Nama:</b> Redanzio Iqbal F. W</p>
+
+  <h3>Keahlian & Minat</h3>
+  <ul>
+    <li>Designer</li>
+    <li>Edit Foto</li>
+    <li>Edit Video</li>
+  </ul>
+
+  <h3>Pengalaman Kerja</h3>
+  <ul>
+    <li>Freelance</li>
+    <li>Designer Perusahaan</li>
+    <li>Bidang Iklan</li>
+  </ul>
+
+  <h3>Pendidikan</h3>
+  <ul>
+    <li>SD Islam Ruhama</li>
+    <li>SMP Islam Ruhama</li>
+    <li>SMA Triguna Utama, Tangerang Selatan</li>
+  </ul>
+</div>
+
+<div id="karya" class="section">
+  <h2>Karya & Project</h2>
+  <ul>
+    <li>Website Portofolio</li>
+    <li>Poster Iklan</li>
+    <li>Video Promosi</li>
+  </ul>
+</div>
+
+<div id="media" class="section">
+  <h2>Media</h2>
+
+  <h3>Video</h3>
+  <video controls>
+    <source src="jogjatrip.mp4" type="video/mp4">
+  </video>
+
+  <h3>Audio</h3>
+  <audio controls>
+    <source src="Coldplay.mp3" type="audio/mpeg">
+  </audio>
+
+  <h3>Foto</h3>
+  <img src="Ayam.jpg" style="width:150px;">
+  <img src="kucing.jpg" style="width:150px;">
+  </foto>
+
+<h3>Dokumen PDF</h3>
+
+<object
+  data="dokumen.pdf"
+  type="application/pdf"
+  width="100%"
+  height="500"
+  style="border-radius:15px; background:#fff;">
+
+  <p>
+    Berikut tampilan PDF
+    <br>
+    <a href="dokumen.pdf" target="_blank">
+      👉 Klik di sini untuk membuka PDF
+    </a>
+  </p>
+
+</object>
+</div>
+
+
+<div id="informasi" class="section">
+  <h2>Informasi Designer</h2>
+  <p>Designer fokus visual kreatif dan modern.</p>
+
+  <div class="stats">
+    <div class="stat"><h4>5</h4><p>Proyek</p></div>
+    <div class="stat"><h4>100</h4><p>Pengalaman</p></div>
+    <div class="stat"><h4>1+</h4><p>Klien</p></div>
+    <div class="stat"><h4>99%</h4><p>Puas</p></div>
+  </div>
+
+  <h3>FAQ</h3>
+  <button class="faq-btn" onclick="toggleFAQ('f1')">Apakah menerima freelance?</button>
+  <div id="f1" class="faq-answer">Ya, menerima project freelance.</div>
+</div>
+
+<div id="kontak" class="section">
+  <h2>Kontak</h2>
+
+  <form onsubmit="alert('Pesan terkirim!'); return false;">
+    <input placeholder="Nama" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Pesan" required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div class="contact-info">
+    <p><i class="fa-brands fa-instagram"></i>@redanzio.iqbal@gmail.com</p>
+    <p><i class="fa fa-phone"></i>087701511569</p>
+    <p><i class="fa fa-location-dot"></i>Tangerang Selatan</p>
+    <iframe src="https://maps.google.com/maps?q=tangerang%20selatan&output=embed"></iframe>
+  </div>
+</div>
+
+<footer>© 2026 Redanzio Iqbal F. W</footer>
+
+<script>
+function openMenu(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function toggleFAQ(id){
+  const el=document.getElementById(id);
+  el.style.display=el.style.display==='block'?'none':'block';
+}
+</script>
+
+</body>
+</html>
